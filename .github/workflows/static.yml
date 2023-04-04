@@ -37,6 +37,9 @@ jobs:
           npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      - name: Copy CNAME 🔧
+        run: |
+          cp ./CNAME ./dist/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
